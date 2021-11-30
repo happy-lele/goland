@@ -15,6 +15,7 @@ type Address struct {
 }
 func main() {
 	mt := MyType{Name: "test",Address: Address{City: "shanghai"}}
+	// 将数据编码成json字符串
 	b, _ := json.Marshal(&mt)
 	fmt.Println(string(b))
 	myType := reflect.TypeOf(mt)

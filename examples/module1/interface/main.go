@@ -2,10 +2,12 @@ package main
 
 import "fmt"
 
+// IF 接口里面只能是方法的签名
 type IF interface {
 	getName() string
 }
 
+// Human 结构体里面只能是属性
 type Human struct {
 	firstName, lastName string
 }
