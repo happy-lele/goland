@@ -13,8 +13,9 @@ type MyType struct {
 type Address struct {
 	City string `json:"city"`
 }
+
 func main() {
-	mt := MyType{Name: "test",Address: Address{City: "shanghai"}}
+	mt := MyType{Name: "test", Address: Address{City: "shanghai"}}
 	// 将数据编码成json字符串
 	b, _ := json.Marshal(&mt)
 	fmt.Println(string(b))
