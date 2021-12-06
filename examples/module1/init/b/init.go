@@ -7,3 +7,4 @@ import (
 func init() {
 	fmt.Println("init from b")
 }
+

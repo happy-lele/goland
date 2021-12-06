@@ -8,6 +8,7 @@ import (
 
 func main() {
 	// k8s任何程序初始化的时候都会这样去读参数
+	// 执行./main --name zhanglele 不输入、默认world
 	name := flag.String("name", "world", "specify the name you want to say hi")
 	flag.Parse()
 	fmt.Println("os args is:", os.Args)

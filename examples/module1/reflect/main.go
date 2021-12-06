@@ -12,13 +12,15 @@ func main() {
 	t := reflect.TypeOf(myMap)
 	fmt.Println("type:", t)
 	v := reflect.ValueOf(myMap)
-	fmt.Println("value:", v)
+	fmt.Println("oop:", v)
 	// struct
 	myStruct := T{A: "a"}
 	v1 := reflect.ValueOf(myStruct)
+	// 遍历struct里面所有的属性
 	for i := 0; i < v1.NumField(); i++ {
 		fmt.Printf("Field %d: %v\n", i, v1.Field(i))
 	}
+	// 遍历struct里面所有的方法
 	for i := 0; i < v1.NumMethod(); i++ {
 		fmt.Printf("Method %d: %v\n", i, v1.Method(i))
 	}
