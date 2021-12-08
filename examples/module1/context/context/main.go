@@ -12,6 +12,7 @@ func main() {
 	go func(c context.Context) {
 		fmt.Println(c.Value("a"))
 	}(ctx)
+
 	timeoutCtx, cancel := context.WithTimeout(baseCtx, time.Second)
 	defer cancel()
 	go func(ctx context.Context) {
